@@ -19,11 +19,24 @@ type Props = {
   instructor: Instructor;
 };
 
+import Seo from "../../components/Seo";
+import SkeletonProfile from "../../components/SkeletonProfile";
+import { useRouter } from "next/router";
+
 const InstructorProfile: React.FC<Props> = ({ instructor }) => {
   const [showModal, setShowModal] = useState(false);
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <SkeletonProfile />;
+  }
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-10">
+      <Seo
+        title={`${instructor.name} – Learnr Instructor`}
+        description={`Book lessons with ${instructor.name}, rated ${instructor.rating}/5. £${instructor.price} per lesson.`}
+      />
       <div className="flex flex-col md:flex-row gap-8 bg-white rounded-xl shadow-md p-6 mb-8">
         <div className="flex-shrink-0 mx-auto md:mx-0">
           <Image
@@ -47,6 +60,7 @@ const InstructorProfile: React.FC<Props> = ({ instructor }) => {
           <button
             onClick={() => setShowModal(true)}
             className="mt-2 rounded bg-blue-600 text-white px-5 py-2 font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            aria-label={`Book lesson with ${instructor.name}`}
           >
             Book Lesson
           </button>
@@ -85,7 +99,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = (instructorsData as Instructor[]).map((inst) => ({
     params: { id: inst.id },
   }));
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {

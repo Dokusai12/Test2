@@ -35,6 +35,7 @@ const InstructorCard: React.FC<Props> = ({ instructor }) => (
     <Link
       href={`/instructors/${instructor.id}`}
       className="mt-auto w-full text-center rounded bg-blue-600 text-white px-4 py-2 font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+      aria-label={`View profile for ${instructor.name}`}
     >
       View Profile
     </Link>
