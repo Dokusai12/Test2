@@ -40,4 +40,16 @@ npm run lint
 
 ---
 
+## Linting and Formatting
+
+- Run `npm run lint` to check for code quality issues using ESLint (with Next.js and Prettier).
+- Run `npm run format` to automatically format your codebase with Prettier (see `.prettierrc` for config).
+
+## Accessibility
+
+- All interactive elements (buttons, links, modals) have proper aria-labels and keyboard support.
+- Booking modal uses correct roles and focus management for accessibility compliance.
+- Loading and error states use semantic, screen-reader-friendly markup.
+- Custom 404 page provides clear navigation and SEO metadata.
+
 **Enjoy exploring Learnr!**
