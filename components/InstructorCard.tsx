@@ -30,7 +30,7 @@ const InstructorCard: React.FC<Props> = ({ instructor }) => (
     </div>
     <h3 className="text-lg font-semibold text-center">{instructor.name}</h3>
     <p className="text-sm text-gray-500">{instructor.rating.toFixed(1)} ★</p>
-    <p className="text-sm text-gray-500 mb-3">{`£${instructor.price} / hr`}</p>
+    <p className="text-sm text-gray-500 mb-3">${instructor.price}/hr</p>
     <Link
       href={`/instructors/${instructor.id}`}
       className="mt-auto w-full text-center rounded bg-orange-600 text-white px-4 py-2 font-medium hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
