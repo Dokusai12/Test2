@@ -1,0 +1,38 @@
+[
+  {
+    "id": "alex-lee",
+    "name": "Alex Lee",
+    "photo": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=400&q=80",
+    "bio": "Enthusiastic Math tutor with 7 years of experience helping students excel. Passionate about making learning fun and engaging.",
+    "rating": 4.9,
+    "price": 35,
+    "availability": [
+      { "day": "Monday", "times": ["10:00", "14:00"] },
+      { "day": "Wednesday", "times": ["12:00", "16:00"] }
+    ]
+  },
+  {
+    "id": "maria-garcia",
+    "name": "Maria Garcia",
+    "photo": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=400&q=80",
+    "bio": "Physics and Chemistry specialist. I love helping students discover the wonders of science in everyday life.",
+    "rating": 4.7,
+    "price": 30,
+    "availability": [
+      { "day": "Tuesday", "times": ["09:00", "13:00", "17:00"] },
+      { "day": "Thursday", "times": ["11:00", "15:00"] }
+    ]
+  },
+  {
+    "id": "samuel-cho",
+    "name": "Samuel Cho",
+    "photo": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=facearea&w=400&q=80",
+    "bio": "Expert English tutor who makes language learning accessible to all ages. Let's build your confidence together!",
+    "rating": 5.0,
+    "price": 40,
+    "availability": [
+      { "day": "Monday", "times": ["15:00", "18:00"] },
+      { "day": "Friday", "times": ["10:00", "13:00"] }
+    ]
+  }
+]
