@@ -1,8 +1,7 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
-// Data model for a single instructor
 export type Instructor = {
   id: string;
   name: string;
@@ -11,40 +10,31 @@ export type Instructor = {
   price: number;
 };
 
-type Props = {
+interface InstructorCardProps {
   instructor: Instructor;
-};
+}
 
-const InstructorCard: React.FC<Props> = ({ instructor }) => {
+const InstructorCard: React.FC<InstructorCardProps> = ({ instructor }) => {
   return (
-    <div
-      className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow p-4 flex flex-col items-center group"
-      style={{ minWidth: 250 }}
-    >
-      {/* Avatar */}
-      <div className="w-24 h-24 rounded-full overflow-hidden mb-2 border-4 border-orange-100">
+    <div className="flex min-w-[250px] flex-col items-center rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-lg">
+      <div className="mb-2 h-24 w-24 overflow-hidden rounded-full border-4 border-orange-100">
         <Image
           src={instructor.photo}
-          alt={`Photo of ${instructor.name}`}
+          alt={instructor.name}
           width={96}
           height={96}
-          className="object-cover w-full h-full"
+          className="h-full w-full object-cover"
           priority
         />
       </div>
 
-      {/* Details */}
-      <h3 className="text-lg font-semibold text-center mb-1">
-        {instructor.name}
-      </h3>
+      <h3 className="mb-1 text-center text-lg font-semibold">{instructor.name}</h3>
       <p className="text-sm text-gray-500">{instructor.rating.toFixed(1)} ★</p>
-      <p className="text-sm text-gray-500 mb-3">{`£${instructor.price} / hr`}</p>
+      <p className="mb-3 text-sm text-gray-500">£{instructor.price.toFixed(2)} / hr</p>
 
-      {/* CTA */}
       <Link
         href={`/instructors/${instructor.id}`}
-        className="mt-auto w-full text-center rounded bg-orange-600 text-white px-4 py-2 font-medium hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
-        aria-label={`View profile for ${instructor.name}`}
+        className="w-full rounded bg-orange-600 px-4 py-2 text-center font-medium text-white transition hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400"
       >
         View Profile
       </Link>
