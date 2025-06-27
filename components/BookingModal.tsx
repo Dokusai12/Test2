@@ -104,40 +104,9 @@ const BookingModal: React.FC<Props> = ({
           <select
             id="day"
             ref={firstControlRef}
-            className="border rounded px-3 py-2 w-full mb-2 focus:ring-blue-400"
-            value={selectedDay}
-            onChange={handleDayChange}
-          >
-            {availableTimes.map((a) => (
-              <option key={a.day} value={a.day}>
-                {a.day}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="mb-4">
-          <label className="block mb-1 font-medium" htmlFor="time">
-            Time
-          </label>
-          <select
-            id="time"
-            className="border rounded px-3 py-2 w-full focus:ring-blue-400"
-            value={selectedTime}
-            onChange={handleTimeChange}
-            disabled={!timesForDay.length}
-          >
-            <option value="">Select time</option>
-            {timesForDay.map((t) => (
-              <option key={t} value={t}>
-                {t}
-              </option>
-            ))}
-          </select>
-        </div>
-        <button
-          onClick={handleConfirm}
-          disabled={!selectedDay || !selectedTime}
-          className="w-full rounded bg-blue-600 text-white px-4 py-2 font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition disabled:opacity-60"
+            className="border rounded px-3 py-2 w-full mb-2 focus:ring-orange-400"
+className="border rounded px-3 py-2 w-full focus:ring-orange-400"
+className="w-full rounded bg-orange-600 text-white px-4 py-2 font-medium hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 transition disabled:opacity-60"
           aria-label="Confirm booking"
         >
           Confirm Booking

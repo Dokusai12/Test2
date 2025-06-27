@@ -53,3 +53,7 @@ npm run lint
 - Custom 404 page provides clear navigation and SEO metadata.
 
 **Enjoy exploring Learnr!**
+
+---
+
+**Brand note:** The brand accent color is **orange** (`brand`/`orange` in Tailwind). All previous blue accents have been replaced with orange for brand consistency.

@@ -29,7 +29,7 @@ export default function Contact() {
             value={form.name}
             onChange={handleChange}
             type="text"
-            className="w-full border rounded px-3 py-2 focus:ring-blue-400"
+            className="w-full border rounded px-3 py-2 focus:ring-orange-400"
             required
           />
         </div>
@@ -43,7 +43,7 @@ export default function Contact() {
             value={form.email}
             onChange={handleChange}
             type="email"
-            className="w-full border rounded px-3 py-2 focus:ring-blue-400"
+            className="w-full border rounded px-3 py-2 focus:ring-orange-400"
             required
           />
         </div>
@@ -56,13 +56,13 @@ export default function Contact() {
             name="message"
             value={form.message}
             onChange={handleChange}
-            className="w-full border rounded px-3 py-2 min-h-[100px] focus:ring-blue-400"
+            className="w-full border rounded px-3 py-2 min-h-[100px] focus:ring-orange-400"
             required
           />
         </div>
         <button
           type="submit"
-          className="w-full rounded bg-blue-600 text-white px-4 py-2 font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+          className="w-full rounded bg-orange-600 text-white px-4 py-2 font-semibold hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
         >
           Send Message
         </button>

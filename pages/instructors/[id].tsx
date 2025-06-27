@@ -59,14 +59,8 @@ const InstructorProfile: React.FC<Props> = ({ instructor }) => {
           <p className="mb-3 text-gray-700">{instructor.bio}</p>
           <button
             onClick={() => setShowModal(true)}
-            className="mt-2 rounded bg-blue-600 text-white px-5 py-2 font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-            aria-label={`Book lesson with ${instructor.name}`}
-          >
-            Book Lesson
-          </button>
-        </div>
-      </div>
-      <div className="bg-blue-50 rounded-lg p-6 mb-6">
+            className="mt-2 rounded bg-orange-600 text-white px-5 py-2 font-semibold hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+<div className="bg-white rounded-lg p-6 mb-6">
         <h2 className="text-xl font-semibold mb-3">Availability</h2>
         <table className="min-w-full table-auto text-left">
           <thead>

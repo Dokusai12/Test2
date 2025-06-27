@@ -9,7 +9,7 @@ const Footer: React.FC = () => (
           href="https://github.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline hover:text-blue-500 transition-colors ml-2"
+          className="hover:underline hover:text-orange-500 transition-colors ml-2"
         >
           GitHub
         </a>

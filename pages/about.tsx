@@ -14,8 +14,8 @@ export default function About() {
       </p>
       <h2 className="text-xl font-semibold mt-8 mb-2">Contact Us</h2>
       <ul className="mb-4">
-        <li>Email: <a href="mailto:info@learnr.com" className="text-blue-600 hover:underline">info@learnr.com</a></li>
-        <li>Phone: <a href="tel:+44123456789" className="text-blue-600 hover:underline">+44 1234 567 89</a></li>
+        <li>Email: <a href="mailto:info@learnr.com" className="text-orange-600 hover:underline">info@learnr.com</a></li>
+<li>Phone: <a href="tel:+44123456789" className="text-orange-600 hover:underline">+44 1234 567 89</a></li>
       </ul>
       <p>
         We love to hear from our users! Get in touch with feedback, questions, or partnership opportunities.

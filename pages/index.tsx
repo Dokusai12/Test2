@@ -24,42 +24,18 @@ export default function Home() {
         description="Book lessons with top-rated instructors and tutors in your area. Search, compare, and learn with the best."
       />
       {/* Hero Section */}
-      <section className="bg-blue-50 py-10 md:py-16 px-4">
-        <div className="max-w-3xl mx-auto text-center mb-10">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-blue-700 mb-4">
-            Find Top Tutors Near You
-          </h1>
-          <p className="text-lg text-gray-700 mb-6">
-            Enter an instructor's name to search and book your next lesson
-          </p>
-          <form
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-lg mx-auto"
-            role="search"
-            aria-label="Search instructors by name"
-            onSubmit={(e) => e.preventDefault()}
-            autoComplete="off"
-          >
-            <input
-              type="search"
-              className="w-full sm:w-auto px-4 py-3 rounded border border-gray-300 focus:ring-blue-400 focus:outline-none text-lg"
-              placeholder="Search by instructor name"
-              aria-label="Search instructors"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              autoFocus
-            />
-            <button
-              type="submit"
-              className="bg-blue-600 text-white px-6 py-3 rounded font-semibold hover:bg-blue-700 transition"
-              aria-label="Filter instructors"
-              tabIndex={-1}
-              style={{ display: "none" }}
-            >
-              Search
-            </button>
-          </form>
-        </div>
-      </section>
+      <section className="bg-white py-10 md:py-16 px-4">
+  <h1 className="text-4xl md:text-5xl font-extrabold text-orange-700 mb-4">
+    Find your next instructor.
+  </h1>
+  <input
+    className="w-full sm:w-auto px-4 py-3 rounded border border-gray-300 focus:ring-orange-400 focus:outline-none text-lg"
+    placeholder="What do you want to learn?"
+  />
+  <button className="bg-orange-600 text-white px-6 py-3 rounded font-semibold hover:bg-orange-700 transition">
+    Search
+  </button>
+</section>
       {/* Instructor Grid */}
       <section className="container mx-auto px-4 py-10">
         <h2 className="text-2xl font-bold mb-6 text-center">Featured Instructors</h2>

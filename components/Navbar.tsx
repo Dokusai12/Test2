@@ -13,16 +13,10 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="font-bold text-lg text-blue-600 hover:text-blue-700">
-          Learnr
-        </Link>
-        <ul className="flex gap-6">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className={`transition-colors px-2 py-1 rounded hover:bg-blue-50 hover:text-blue-700 focus:outline-none focus:ring focus:ring-blue-300 ${
-                  pathname === link.href ? "font-semibold text-blue-600" : "text-gray-700"
+        <Link href="/" className="font-bold text-lg text-orange-600 hover:text-orange-700">
+...
+className={`transition-colors px-2 py-1 rounded hover:bg-orange-100 hover:text-orange-700 focus:outline-none focus:ring focus:ring-orange-300 ${
+pathname === link.href ? "font-semibold text-orange-600" : "text-gray-700"
                 }`}
               >
                 {link.label}
